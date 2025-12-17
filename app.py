@@ -3,8 +3,13 @@ import pandas as pd
 from joblib import load
 import os
 
-with open(f'{os.getcwd()}/random_forest_model.joblib', 'rb') as f:
-    model = load(f)
+
+try:
+  with open(f'{os.getcwd()}/DSLC-Exam/random_forest_model.joblib', 'rb') as f:
+      model = load(f)
+except:
+  with open('random_forest_model.joblib', 'rb') as f:
+      model = load(f)
 
 # Initialize the Flask application
 app = flask.Flask(__name__, template_folder='templates')
