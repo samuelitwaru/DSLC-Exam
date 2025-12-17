@@ -10,6 +10,7 @@ try:
 except:
   with open('random_forest_model.joblib', 'rb') as f:
       model = load(f)
+      print(f'{os.getcwd()}/DSLC-Exam/random_forest_model.joblib')
 
 # Initialize the Flask application
 app = flask.Flask(__name__, template_folder='templates')
