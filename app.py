@@ -2,7 +2,7 @@ import flask
 import pandas as pd
 from joblib import load
 
-with open('random_forest_model.joblib', 'rb') as f:
+with open('./random_forest_model.joblib', 'rb') as f:
     model = load(f)
 
 # Initialize the Flask application
