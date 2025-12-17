@@ -5,7 +5,7 @@ import os
 
 
 try:
-  with open(f'{os.getcwd()}/DSLC-Exam/random_forest_model.joblib', 'rb') as f:
+  with open(f'home/dslc/DSLC-Exam/random_forest_model.joblib', 'rb') as f:
       model = load(f)
 except:
   with open('random_forest_model.joblib', 'rb') as f:
